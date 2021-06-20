@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction - Documentation - toppt</title>
+        <title>Generation de fichier PPT - Documentation - toppt</title>
         
         
 
@@ -99,7 +99,7 @@
                  <a href="/">
                     <img width="100%" src="https://codeur-academy.com/Content/CodeurAcademy/images/logo-codeur-academy.png" alt="Codeur Academy">
                 </a>
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="generation-ppt.html"><strong aria-hidden="true">2.</strong> Generation de fichier PPT</a></li><li class="chapter-item expanded "><a href="commande.html"><strong aria-hidden="true">3.</strong> Commandes</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="generation-ppt.html" class="active"><strong aria-hidden="true">2.</strong> Generation de fichier PPT</a></li><li class="chapter-item expanded "><a href="commande.html"><strong aria-hidden="true">3.</strong> Commandes</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -168,17 +168,71 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p>ToPPt est une application console qui vous permet de transformer un  <strong>fichier Markdown</strong> vers un fichier de <strong>présentation PowerPoint</strong>.</p>
+                        <h1 id="génération-dun-fichier-présentation-powerpoint"><a class="header" href="#génération-dun-fichier-présentation-powerpoint">Génération d'un fichier présentation Powerpoint</a></h1>
+<p>La commande <code>toppt</code> permet de générer un fichier Powerpoint à partie d'un fichier Markdown. par exemple la commande suivante permet générer le fichier &quot;introduction-html.ppt&quot; depuis le fichier &quot;introduction-html.md&quot;</p>
+<pre><code class="language-powershell">toppt introduction-html.md
+</code></pre>
+<h2 id="template-powerpoint"><a class="header" href="#template-powerpoint">Template PowerPoint</a></h2>
+<p>Par défaut le programme cherche un template nommé &quot;template.potx&quot; qui doit être existe dans le répertoire d'exécution de la commande.</p>
+<h3 id="fichier-de-configuration-du-template"><a class="header" href="#fichier-de-configuration-du-template">Fichier de configuration du template</a></h3>
+<p>Un fichier de configuration json pour indiquer une description des slides de la template, doit être présent dans le même répertoire du fichier &quot;template.potx&quot;</p>
+<h4 id="exemple-de-fichier-de-configuration"><a class="header" href="#exemple-de-fichier-de-configuration">Exemple de fichier de configuration</a></h4>
+<p>Le fichier indique que la template contient deux slide. la première slide appelé : &quot;Titre document&quot; et la deuxième slide appelé &quot;Titre contenu&quot;.</p>
+<pre><code class="language-json">{
+  &quot;Slides&quot;: [
+    {   
+      &quot;Layout&quot;: &quot;Titre document&quot;,
+      &quot;Order&quot;: 1,
+      &quot;SlideZones&quot;: [
+        {
+          &quot;Name&quot;: &quot;Titre&quot;,
+          &quot;ContentTypes&quot;: [
+            &quot;Title&quot;
+          ]
+        },
+        {
+          &quot;Name&quot;: &quot;SousTitre&quot;,
+          &quot;ContentTypes&quot;: [
+            &quot;Text&quot;
+          ]
+        }
+      ]
+
+    },
+    {
+      &quot;Layout&quot;: &quot;Titre contenu&quot;,
+      &quot;Order&quot;: 2,
+      &quot;SlideZones&quot;: [
+        {
+          &quot;Name&quot;: &quot;Titre&quot;,
+          &quot;ContentTypes&quot;: [
+            &quot;Title&quot;
+          ]
+        },
+        {
+          &quot;Name&quot;: &quot;Contenu&quot;,
+          &quot;ContentTypes&quot;: [
+            &quot;Text&quot;, &quot;Image&quot;
+          ]
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
                         
-                            <a rel="next" href="generation-ppt.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="commande.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -190,9 +244,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                    <a rel="prev" href="introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
                 
-                    <a rel="next" href="generation-ppt.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="commande.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
