@@ -1,0 +1,14 @@
+[book]
+authors = ["ESSARRAJ Fouad"]
+language = "fr"
+multilingual = false
+src = "src"
+title = "Documentation - toppt"
+
+[output.html]
+additional-css = ["theme/custom.css"]
+additional-js = ["theme/custom.js"]
+default-theme = "Codeur"
+
+[build]
+build-dir = "docs"

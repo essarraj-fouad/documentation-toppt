@@ -1,0 +1,43 @@
+main hr{
+    display: none;
+}
+
+em{
+    color : #0557b3;
+}
+
+.fullScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+
+.codeur-btn {
+
+	border:1px solid #00a3ad;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+}
+.codeur-btn:hover {
+
+}
+.codeur-btn:active {
+	position:relative;
+	top:1px;
+}
+
+/* fix code color background*/
+
+:not(pre):not(a) > .hljs {
+    color: #dcdcdc !important;
+    overflow-x: initial;
+}
